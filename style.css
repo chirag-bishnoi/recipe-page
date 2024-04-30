@@ -58,13 +58,12 @@ body {
     font-size: 16px;
     font-family: 'Outfit', sans-serif;
     color: var(--clr-Wenge-Brown);
-    display: flex;
-    align-items: center;
 }
 
 main {
     max-width: 730px;
     margin-inline: auto;
+    margin-block: 5%;
     background-color: var(--clr-White);
     padding: 2.27rem;
     border-radius: 1.2rem;
