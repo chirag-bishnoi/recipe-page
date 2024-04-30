@@ -1,0 +1,233 @@
+@font-face {
+    font-family: 'Young Serif';
+    src: local('Young Serif'),
+         local('Young-Serif'),
+         url('assets/fonts/young-serif/YoungSerif-Regular.woff2') format('woff2'),
+         url('assets/fonts/young-serif/YoungSerif-Regular.woff') format('woff');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Outfit';
+    src: local('Outfit Regular'),
+         local('Outfit-Regular'),
+         url('assets/fonts/outfit/Outfit-Regular.woff2') format('woff2'),
+         url('assets/fonts/outfit/Outfit-Regular.woff') format('woff');
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'Outfit';
+    src: local('Outfit Medium'),
+         local('Outfit-Medium'),
+         url('assets/fonts/outfit/Outfit-Medium.woff2') format('woff2'),
+         url('assets/fonts/outfit/Outfit-Medium.woff') format('woff');
+    font-weight: 600;
+}
+@font-face {
+    font-family: 'Outfit';
+    src: local('Outfit Bold'),
+         local('Outfit-Bold'),
+         url('assets/fonts/outfit/Outfit-Bold.woff2') format('woff2'),
+         url('assets/fonts/outfit/Outfit-Bold.woff') format('woff');
+    font-weight: 700;
+}
+
+:root {
+    /*primary*/
+    --clr-Nutmeg:hsl(14, 45%, 36%);
+    --clr-Dark-Raspberry:hsl(332, 51%, 32%);
+    /*secondary*/
+    --clr-White:hsl(0, 0%, 100%);
+    --clr-Rose-White:hsl(330, 100%, 98%);
+    --clr-Eggshell:hsl(30, 54%, 90%);
+    --clr-Light-Grey:hsl(30, 18%, 87%);
+    --clr-Wenge-Brown:hsl(30, 10%, 34%);
+    --clr-Dark-Charcoal:hsl(24, 5%, 18%);
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* GENERAL STYLING*/
+
+
+body {
+    min-height: 100vh;
+    background-color: var(--clr-Eggshell);
+    font-size: 16px;
+    font-family: 'Outfit', sans-serif;
+    color: var(--clr-Wenge-Brown);
+    display: flex;
+    align-items: center;
+}
+
+main {
+    max-width: 730px;
+    margin-inline: auto;
+    background-color: var(--clr-White);
+    padding: 2.27rem;
+    border-radius: 1.2rem;
+}
+
+.title {
+    /* UTILITY CLASS */
+
+    font-family: 'Young Serif', serif;
+    font-weight: normal;
+    color: var(--clr-Nutmeg);
+    font-size: 1.75rem;
+}
+
+hr {
+    border: 1px solid var(--clr-Light-Grey);
+}
+
+/* MAIN STYLES
+===================*/
+
+/* INTRO SECTION*/
+
+.intro__image-container {
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.intro__image {
+    width: 100%;
+}
+
+.intro__title {
+    font-family: 'Young Serif', serif;
+    font-weight: normal;
+    font-size: 2.5rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.2rem;
+    color: var(--clr-Dark-Charcoal);
+}
+
+.intro__p {
+    margin-bottom: 2rem;
+    line-height: 1.4;
+}
+
+/* PREPARATION SECTION*/
+
+.preparation {
+    background-color: var(--clr-Rose-White);
+    padding: 1.7rem;
+    margin-bottom: 1.5rem;
+    border-radius: .7rem;
+}
+
+.preparation__title {
+    color: var(--clr-Dark-Raspberry);
+    font-size: 1.2rem;
+    padding-bottom: 1rem;
+}
+
+.preparation__list {
+    padding-left: 1.25rem;
+}
+
+.preparation__list-item {
+    padding-left: 1.2rem;
+    margin-bottom: .7rem;
+}
+
+.preparation__list-item::marker {
+    color: var(--clr-Dark-Raspberry);
+    font-size: 13px;
+}
+
+/* INGREDIENTS SECTION */
+
+.ingredients {
+    margin-bottom: 2rem;
+}
+
+.ingredients__title {
+    margin-bottom: 1.2rem;
+}
+
+.ingredients__list{
+    list-style-type: square;
+    padding-left: 1.2rem;
+    font-weight: 400;
+}
+
+.ingredients__list-item {
+    margin-bottom: .7rem;
+    padding-left: 1.2rem;
+}
+
+.ingredients__list-item::marker {
+    color: var(--clr-Nutmeg);
+    font-size: 12px;
+}
+
+/* INSTRUCTION SECTION*/
+
+.instructions{
+    margin-bottom: 2rem;
+}
+
+.instructions__title {
+    margin-top: 1.7rem;
+    margin-bottom: 1.2rem;
+}
+
+.instructions__list{
+    padding-left: 1.2rem;
+}
+
+.instructions__list-item {
+    line-height: 1.5;
+    margin-bottom: .5rem;
+    padding-left: 1.2rem;
+}
+
+.instructions__list-item::marker {
+    color: var(--clr-Nutmeg);
+    font-weight: 700;
+}
+
+/* NUTRITIONS SECTION*/
+
+.nutrition__title {
+    margin-top: 1.7rem;
+    margin-bottom: 1.3rem;
+}
+
+.nutrition__p {
+    margin-bottom: 1.3rem;
+}
+
+.nutrition__table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 1rem;
+}
+
+.nutrition__table-row {
+    display: flex;
+    margin-bottom: .4rem;
+}
+
+.nutrition__table-col{
+    border-bottom: 2px solid var(--clr-Light-Grey);
+    padding-block: .7rem;
+    flex: 1 1 50%;
+}
+
+.nutrition__table-col:nth-of-type(2n) {
+    color: var(--clr-Nutmeg);
+    font-weight: 700;
+}
+.nutrition__table-col:nth-of-type(2n + 1) {
+    padding-left: 2rem;
+}
+
+.nutrition__table--no-border {
+    border: none;
+}
